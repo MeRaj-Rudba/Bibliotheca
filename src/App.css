@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&display=swap");
+
+:root {
+  --accent: #53a69d;
+  --accent2: #60bfae;
+  --accent3: #f2dc9b;
+  --accent4: #f2ad85;
+  --accent5: #d9695f;
+  --dark: #262626;
+  --light: #d9d9d9;
+  --pitch-dark: #0d0d0d;
+  --ff-display: "Playfair Display", serif;
+  --ff-main: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-accent-1 {
+  background-color: var(--accent);
+}
+.bg-accent-2 {
+  background-color: var(--accent2);
+}
+.bg-accent-3 {
+  background-color: var(--accent3);
+}
+.bg-accent-4 {
+  background-color: var(--accent4);
+}
+.bg-accent-5 {
+  background-color: var(--accent5);
+}
+.text-color-1 {
+  color: var(--accent);
+}
+.text-color-2 {
+  color: var(--accent);
+}
+.text-color-3 {
+  color: var(--accent3);
+}
+.text-color-4 {
+  color: var(--accent4);
+}
+.text-color-5 {
+  color: var(--accent5);
+}
+.font-display {
+  font-family: var(--ff-display);
+}
+.font-main {
+  font-family: var(--ff-main);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-family: var(--ff-main);
+}
+
+.hero-banner {
+  height: 90vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--accent); */
+  color: var(--dark);
+}
+.section-title {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.book-list {
+  margin-bottom: 6rem;
+  color: var(--dark);
+  min-height: 60vh;
+}
+footer {
+  background: var(--pitch-dark);
+  min-height: 20vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+}
+.special-italic {
+  font-style: italic;
+}
+.admin-page {
+  min-height: 80vh;
+  padding: 1rem;
+  padding-top: 5rem;
+}
+.admin-top {
+  padding: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.admin-mid {
+  padding: 2rem;
+  display: grid;
+  justify-content: center;
+}
+.admin-mid-btn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.book-card-view {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.book-card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--ff-main);
+}
+
+.book-title {
+  font-weight: 600;
+}
+.book-text-author {
+  font-style: italic;
+  font-size: 1em;
+}
+.book-text-badge {
+  font-size: 1em;
+}
+
+.book-card-img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .book-card-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .book-card {
+    min-width: 25rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.table-btn {
+  border: none;
+  background: transparent;
+}
+.table-btn:hover {
+  color: var(--accent);
+  background: transparent;
+}
+
+thead {
+  border: none;
+}
+.table th,
+.table td {
+  border-top: none;
+}
+.my-table {
+  background-color: #f2f2f2;
+  color: var(--dark);
+  border-radius: 5px;
+}
+.my-table td {
+  font-style: italic;
+  cursor: pointer;
+}
+
+.my-table button {
+  color: var(--dark);
+}
+.my-theme-btn {
+  background: var(--accent2);
+  color: #f2f2f2;
+  border: none;
+}
+.my-theme-btn:hover {
+  color: #f2f2f2;
+  background: var(--accent);
+  border: none;
+}
+.my-theme-btn:focus {
+  color: #f2f2f2;
+  background: var(--accent);
+  border: none;
+}
+.my-theme-btn:disabled {
+  color: #f2f2f2;
+  background: var(--accent);
+  border: none;
+}
+.hero-author {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.my-link {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+.my-link:hover {
+  color: var(--accent4) !important;
+}
+.logo-name {
+  font-family: var(--ff-display);
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--accent);
+}
+.my-badge {
+  font-style: normal;
+}
+.spinner-div {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+.loading-spinner {
+  margin: 1rem;
+}
+.spinner-1 {
+  color: var(--accent);
+}
+.spinner-2 {
+  color: var(--accent3);
+}
+.spinner-3 {
+  color: var(--accent5);
+}
+
+.my-container-div {
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 75vh;
+}
+.my-form-div {
+  width: 25rem;
+}
+.login-btm {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.signIn-toggle {
+  font-size: 1.2em;
+  color: var(--accent2);
+  cursor: pointer;
+}
+.profile-page {
+  min-height: 75vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.profile-card {
+  width: 25rem;
+  padding: 2em 1.2em;
+}
+.profile-details {
+  
+  margin-top: 2em;
+}
+.profile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.my-theme-btn {
+  height: 3em;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-card-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.profile-left {
+  display: grid;
+  justify-content: center;
+  row-gap: 1em;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+}
+
+
+
+.profile-text {
+  font-size: 0.8em;
+  text-align: left;
+}
+.profile-btn {
+  font-size: 0.8em;
+}
+
+.btn-icon {
+  margin-right: 0.25em;
+}
+
+.table-data {
+  font-size: 0.8em;
 }
